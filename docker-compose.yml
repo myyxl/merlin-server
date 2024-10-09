@@ -1,0 +1,8 @@
+version: "3.3"
+
+services:
+  merlin:
+    build: ./merlin
+    ports:
+      - "443:443"
+      - "50051:50051"
