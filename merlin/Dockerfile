@@ -9,4 +9,4 @@ RUN apt install -y wget p7zip-full
 RUN wget https://github.com/Ne0nd0g/merlin/releases/latest/download/merlinServer-Linux-x64.7z
 RUN 7z x merlinServer-Linux-x64.7z -pmerlin
 
-CMD ./merlinServer-Linux-x64
+CMD ./merlinServer-Linux-x64 -password hackathonmerlin -addr 0.0.0.0:50051
