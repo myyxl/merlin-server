@@ -2,7 +2,11 @@ version: "3.3"
 
 services:
   merlin:
-    build: ./merlin
+    build:
+      context: ./merlin
+      args:
+        - PASSWORD_ENV=${C2_PASSWORD}
+        - ADDR_ENV=${C2_CLI_ADDR}
     ports:
       - "443:443"
-      - "50051:50051"
+      - "${C2_CLI_PORT}:${C2_CLI_PORT}"
